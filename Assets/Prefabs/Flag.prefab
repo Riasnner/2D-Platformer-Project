@@ -240,3 +240,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891ba2847e58cf540b57fd7af8cb1f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 0}
+  playerMovement: {fileID: 0}

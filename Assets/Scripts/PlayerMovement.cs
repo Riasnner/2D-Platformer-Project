@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sprite;
 
+    [SerializeField] private ParticleSystem dust;
     [SerializeField] private LayerMask jumpableGround;
 
     private float dirX = 0f;
@@ -66,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         if(rb.velocity.y > .1f)
         {
             State = MovementState.jumping;
+            CreateDust();
         }
         else if (rb.velocity.y < -.1f)
         {
@@ -83,5 +85,10 @@ public class PlayerMovement : MonoBehaviour
     public void StopPlayer()
     {
         rb.bodyType = RigidbodyType2D.Static;
+    }
+
+    private void CreateDust()
+    {
+        dust.Play();
     }
 }
