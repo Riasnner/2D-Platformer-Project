@@ -6,19 +6,16 @@ public class EnemyPatrol : MonoBehaviour
 {
     [SerializeField] private GameObject pointA;
     [SerializeField] private GameObject pointB;
-    private Animator anim;
     private Rigidbody2D rb;
     private Transform currentPoint;
     [SerializeField] private float speed;
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 point = currentPoint.position - transform.position;
@@ -49,10 +46,5 @@ public class EnemyPatrol : MonoBehaviour
         Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
         Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
-    }
-
-    private void playDeath()
-    {
-        anim.SetTrigger("EnemyDeath");
     }
 }
