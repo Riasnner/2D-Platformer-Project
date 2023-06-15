@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Apple
   - Trap
+  - Enemy
+  - Weakpoint
+  - Feet
   layers:
   - Default
   - TransparentFX

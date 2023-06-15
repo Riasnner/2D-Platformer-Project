@@ -10,7 +10,6 @@ public class GameOverScreen : MonoBehaviour
     public void Setup()
     {
         gameObject.SetActive(true);
-        //pointsText = score.ToString() + " Apples Collected"; 
     }
 
     public void RestartButton()
